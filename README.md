@@ -1,8 +1,10 @@
 # class-naming<br>
-css방법론<br>
-1. SMACSS<br>
-  -5가지 큰 틀로 나눔<br>
-    -base<br>
+css방법론
+
+1. SMACSS
+```
+  -5가지 큰 틀로 나눔
+    -base
     초기화css. 기본이 되는 css를 작성해둔다.<br>
     -layout<br>
     큰 틀을 정의함. header, footer, pagename등.<br>
@@ -20,7 +22,9 @@ css방법론<br>
     접두사 'theme-', 'tm-' 등을 이용해 적용.<br>
   -접두사를 사용하여 제어하기때문에 클래스가 시멘틱하다.<br>
   -직관적으로 어떤 기능이 있는지 알아볼 수 있어 협업시 유리<br>
-2. OOCSS<br>
+```
+2. OOCSS
+```
   -컨테이너와 컨텐츠 혹은 구조와 스타일을 분리.<br>
   -공통 클래스로 제어하는 구조(ex 부트스트랩)<br>
   -구조별 스타일별로 클래스가 따로 들어간다.<br>
@@ -28,7 +32,9 @@ css방법론<br>
   -시멘틱한 클래스들이 아니기에 구분이 어렵다.<br>
   -스타일별로 정의하기에 css충돌의 위험성이 있다.<br>
   -상태별 클래스에 대한 설명이 필요하여 협업시 설명이 필요<br>
-3. BEM<br>
+```
+3. BEM
+```
   -black-element-modifier를 뜻함.<br>
   -클래스명에 BEM을 모두 넣어 하이픈, 언더스코어의 개수 등으로 조정<br>
   -일반적으로 black-name__element-name--modifier-state형식으로 네이밍.<br>
@@ -48,3 +54,4 @@ css방법론<br>
   -클래스안에 black-element-modifier가 다 들어가기때문에 시멘틱하다.<br>
   -클래스가 한번에 들어가 협업에 가장 유리한 네이밍방법.<br>
   -클래스 네임이 길어져 마크업이 지저분질 수 있다.
+```
