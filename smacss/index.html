@@ -29,19 +29,25 @@
       <!-- l-content: layout-content -->
       <!-- is-content: content state -->
       <header class="cm-header">
-        <div class="l-content">
-          <h1 class="logo">
-            <span class="is-default">LOGO</span>
-            <span class="is-white">LOGO</span>
-          </h1>
-          <nav class="cm-nav">
-            <a href="#top" class="link is-active">top</a>
-            <a href="#middle" class="link">middle</a>
-            <a href="#bottom" class="link">bottom</a>
-          </nav>
+        <div class="l-fixed">
+          <div class="l-content">
+            <div class="l-flex-wrap">
+              <h1 class="logo">
+                <span class="is-default">LOGO</span>
+                <span class="is-white">LOGO</span>
+              </h1>
+              <nav class="cm-nav">
+                <div class="l-flex-wrap">
+                  <a href="#top" class="link is-active">top</a>
+                  <a href="#middle" class="link">middle</a>
+                  <a href="#bottom" class="link">bottom</a>
+                </div>
+              </nav>
+            </div>
+          </div>
         </div>
         <div class="l-top-btn">
-          <button class="top-btn">top</button>
+          <button id="top-btn">top</button>
         </div>
       </header>
       <div class="main-content">
@@ -85,10 +91,25 @@
       <footer class="cm-footer">
         <div class="l-content">
           <address class="tel">010-9559-8262</address>
-          <address class="name">고은영</address>
+          <address class="name">KEY</address>
         </div>
       </footer>
     </div>
   </div>
+  <script>
+    const topBtn = document.querySelector('#top-btn');
+    const topContent = document.querySelector('#top');
+    const middleContent = document.querySelector('#middle');
+    const bottomContent = document.querySelector('#bottom');
+    function isMove (e) {
+      const offTop = e.getBoundingClientRect().top;
+      const saveName = e.getAttribute(href);
+      console.log(offTop, saveName);
+    }
+    console.log(isMove(topContent));
+    topBtn.addEventListener('click', function(){
+      window.scrollTo({top:0, left:0, behavior: 'smooth'});
+    })
+  </script>
 </body>
 </html>

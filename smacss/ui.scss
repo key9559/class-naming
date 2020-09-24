@@ -1,0 +1,76 @@
+/* ===================== layout ===================== */
+.l-content {
+  max-width: 1100px;
+  width: 95%;
+  margin: 0px auto;
+  padding: 0px 20px;
+}
+.l-fixed {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 50px;
+  background: #f1f1f1;
+  z-index: 90;
+}
+.l-top-btn {
+  position: fixed;
+  bottom: 100px;
+  right: 50%;
+  // content width + btn width
+  transform: translate(570px);
+  width: 30px;
+  height: 30px;
+  z-index: 90;
+  #top-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+    text-transform: uppercase;
+    font-size: 10px;
+    cursor: pointer;
+  }
+}
+.l-flex-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.l-flex-main {
+  flex-basis: 70%;
+  background: tomato;
+}
+.l-flex-side {
+  flex-basis: 29%;
+  background: beige;
+}
+/* header */
+.cm-header {
+  height: 50px;
+}
+/* navigation */
+.cm-nav {
+  .l-flex-wrap {
+    justify-content: flex-start;
+  }
+}
+/* footer */
+.cm-footer {
+  padding: 50px 0px;
+  background-color: #cdcdcd;
+}
+/* ===================== END layout ===================== */
+/* ===================== module ===================== */
+
+/* ===================== END module ===================== */
+/* ===================== state ===================== */
+/* ===================== END state ===================== */
+/* ===================== theme ===================== */
+/* ===================== END theme ===================== */

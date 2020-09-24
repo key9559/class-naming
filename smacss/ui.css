@@ -1,1 +1,101 @@
-/* No CSS */
+/* ===================== layout ===================== */
+.l-content {
+  max-width: 1100px;
+  width: 95%;
+  margin: 0px auto;
+  padding: 0px 20px;
+}
+
+.l-fixed {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 50px;
+  background: #f1f1f1;
+  z-index: 90;
+}
+
+.l-top-btn {
+  position: fixed;
+  bottom: 100px;
+  right: 50%;
+  -webkit-transform: translate(570px);
+          transform: translate(570px);
+  width: 30px;
+  height: 30px;
+  z-index: 90;
+}
+
+.l-top-btn #top-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: white;
+  -webkit-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.l-flex-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.l-flex-main {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+  background: tomato;
+}
+
+.l-flex-side {
+  -ms-flex-preferred-size: 29%;
+      flex-basis: 29%;
+  background: beige;
+}
+
+/* header */
+.cm-header {
+  height: 50px;
+}
+
+/* navigation */
+.cm-nav .l-flex-wrap {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+/* footer */
+.cm-footer {
+  padding: 50px 0px;
+  background-color: #cdcdcd;
+}
+
+/* ===================== END layout ===================== */
+/* ===================== module ===================== */
+/* ===================== END module ===================== */
+/* ===================== state ===================== */
+/* ===================== END state ===================== */
+/* ===================== theme ===================== */
+/* ===================== END theme ===================== */
