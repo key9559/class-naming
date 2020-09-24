@@ -1,9 +1,9 @@
-# class-naming
-css방법론
-1. SMACSS
-  -5가지 큰 틀로 나눔
-    -base
-    초기화css. 기본이 되는 css를 작성해둔다.
+# class-naming<br>
+css방법론<br>
+1. SMACSS<br>
+  -5가지 큰 틀로 나눔<br>
+    -base<br>
+    초기화css. 기본이 되는 css를 작성해둔다.<br>
     -layout
     큰 틀을 정의함. header, footer, pagename등.
     접두사 'l-'을 붙이거나 아이디 선택자를 사용하여 구성한다.
