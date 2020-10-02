@@ -3,64 +3,110 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-  <meta name="keyword" content="css, css방법론, oocss">
+  <meta name="keyword" content="css, css방법론, OOCSS">
   <meta name="title" content="OOCSS">
-  <meta name="description" content="oocss 예제">
+  <meta name="description" content="OOCSS 예제">
   <meta name="author" content="KEY">
 
   <!-- 오픈그래픽 -->
   <meta property="og:url" content="https://github.com/key9559">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="oocss example">
+  <meta property="og:title" content="OOCSS example">
   <meta property="og:description" content="OOCSS 클래스 방법론 예제">
 
   <!-- webfont -->
   <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
   <!-- css -->
-  <link rel="stylesheet" href="reset-custom.css.css">
+  <link rel="stylesheet" href="reset-custom.css">
   <link rel="stylesheet" href="ui.css">
-  
+
   <title>OOCSS</title>
 </head>
 <body>
   <div id="app">
     <div class="wrap">
-      <header class="">
-        <div class="">
-          <h1 class="">
-            <span class="">LOGO</span>
-            <span class="">LOGO</span>
-          </h1>
-          <nav class="">
-            <a href="#top" class="">top</a>
-            <a href="#middle" class="">middle</a>
-            <a href="#bottom" class="">bottom</a>
-          </nav>
+      <header class="header">
+        <div class="fixed-wrap">
+          <div class="hd-content">
+            <div class="flex-wrap">
+              <h1 class="logo">
+                <span class="logo-default">LOGO</span>
+                <span class="logo-white">LOGO</span>
+              </h1>
+              <nav class="main-nav">
+                <div class="flex-wrap">
+                  <a href="#top" class="link active">top</a>
+                  <a href="#middle" class="link">middle</a>
+                  <a href="#bottom" class="link">bottom</a>
+                </div>
+              </nav>
+            </div>
+          </div>
         </div>
-        <div class="">
-          <button class="">top</button>
+        <div class="top-btn-wrap">
+          <button id="top-btn">top</button>
         </div>
       </header>
-      <div class="">
-        <div class="">
-          <section id="top" class="">
+      <div class="main-content">
+        <div class="content-wrap">
+          <section id="top" class="top-content">
             <h2>first content area</h2>
+            <form method="get" id="search-form">
+              <fieldset class="search-area">
+                <legend class="form-title none">
+                  검색
+                </legend>
+                <div class="input-box">
+                  <input type="text" class="search-text" />
+                  <button type="button" class="search-btn">검색</button>
+                </div>
+              </fieldset>
+            </form>
           </section>
-          <section id="middle" class="">
+          <section id="middle" class="middle-content">
             <h2>second content area</h2>
+            <div class="flex-wrap">
+              <article class="flex-main">
+                <h3>main content</h3>
+              </article>
+              <aside class="flex-side">
+                <h3>side content</h3>
+              </aside>
+            </div>
           </section>
-          <section id="bottom" class="">
+          <section id="bottom" class="bottom-content">
             <h2>last content area</h2>
+            <div class="flex-wrap">
+              <div class="flex-content">content1</div>
+              <div class="flex-content">content2</div>
+              <div class="flex-content">content3</div>
+              <div class="flex-content">content4</div>
+            </div>
           </section>
         </div>
       </div>
-      <footer class="">
-        <div class="">
-          <address class="">010-9559-8262</address>
-          <address class="">고은영</address>
+      <footer class="footer">
+        <div class="content-wrap">
+          <address class="tel">010-9559-8262</address>
+          <address class="name">KEY</address>
         </div>
       </footer>
     </div>
   </div>
+  <script>
+    const topBtn = document.querySelector('#top-btn');
+    const topContent = document.querySelector('#top');
+    const middleContent = document.querySelector('#middle');
+    const bottomContent = document.querySelector('#bottom');
+    function isMove (e) {
+      const offTop = e.getBoundingClientRect().top;
+      const saveName = e.getAttribute(href);
+      console.log(offTop, saveName);
+    }
+    console.log(isMove(topContent));
+    topBtn.addEventListener('click', function(){
+      window.scrollTo({top:0, left:0, behavior: 'smooth'});
+    })
+  </script>
 </body>
 </html>
