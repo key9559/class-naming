@@ -25,91 +25,73 @@
 <body>
   <div id="app">
     <div class="wrap">
-      <!-- cm-content: common-content -->
-      <!-- l-content: layout-content -->
-      <!-- is-content: content state -->
-      <header class="cm-header">
-        <div class="l-fixed">
-          <div class="l-content">
-            <div class="l-flex-wrap">
-              <h1 class="logo">
-                <span class="is-default">LOGO</span>
-                <span class="is-white">LOGO</span>
+      <header class="header">
+        <div class="header__fixed">
+          <div class="content-center">
+            <div class="header__flex-wrap content-flex-wrap">
+              <h1 class="header__logo">
+                <span class="header__logo--default">LOGO</span>
+                <span class="header__logo--white">LOGO</span>
               </h1>
-              <nav class="cm-nav">
-                <div class="l-flex-wrap">
-                  <a href="#top" class="link is-active">top</a>
-                  <a href="#middle" class="link">middle</a>
-                  <a href="#bottom" class="link">bottom</a>
+              <nav class="header__nav">
+                <div class="header__nav-flex-wrap content-flex-wrap">
+                  <a href="#top" class="header__link header__link--active">top</a>
+                  <a href="#middle" class="header__link">middle</a>
+                  <a href="#bottom" class="header__link">bottom</a>
                 </div>
               </nav>
             </div>
           </div>
         </div>
-        <div class="l-top-btn">
-          <button id="top-btn">top</button>
+        <div class="top-btn">
+          <button id="top-btn__txt">top</button>
         </div>
       </header>
       <div class="main-content">
-        <div class="l-content">
-          <section id="top" class="top-content">
+        <div class="content-center">
+          <section id="top" class="main-content__top top-content">
             <h2>first content area</h2>
-            <form method="get" id="search-form">
-              <fieldset class="search-area">
-                <legend class="form-title none">
+            <form method="get" id="search-form" class="top-content__search-form">
+              <fieldset class="search-form__area">
+                <legend class="search-form__title none">
                   검색
                 </legend>
-                <div class="input-box">
-                  <input type="text" class="search-text" />
-                  <button type="button" class="search-btn">검색</button>
+                <div class="search-form__input input-box">
+                  <input type="text" class="input-box__input" />
+                  <button type="button" class="input-box__btn">검색</button>
                 </div>
               </fieldset>
             </form>
           </section>
-          <section id="middle" class="middle-content">
+          <section id="middle" class="main-content__middle middle-content">
             <h2>second content area</h2>
-            <div class="l-flex-wrap">
-              <article class="l-flex-main">
+            <div class="content-flex-wrap">
+              <article class="content-flex__main">
                 <h3>main content</h3>
               </article>
-              <aside class="l-flex-side">
+              <aside class="content-flex__side">
                 <h3>side content</h3>
               </aside>
             </div>
           </section>
-          <section id="bottom" class="bottom-content">
+          <section id="bottom" class="main-content__bottom bottom-content">
             <h2>last content area</h2>
-            <div class="l-flex-wrap">
-              <div class="flex-content">content1</div>
-              <div class="flex-content">content2</div>
-              <div class="flex-content">content3</div>
-              <div class="flex-content">content4</div>
+            <div class="content-flex-wrap">
+              <div class="content-flex__desc">content1</div>
+              <div class="content-flex__desc">content2</div>
+              <div class="content-flex__desc">content3</div>
+              <div class="content-flex__desc">content4</div>
             </div>
           </section>
         </div>
       </div>
-      <footer class="cm-footer">
-        <div class="l-content">
-          <address class="tel">010-9559-8262</address>
-          <address class="name">KEY</address>
+      <footer class="footer">
+        <div class="content-center">
+          <address class="footer__tel">010-9559-8262</address>
+          <address class="footer__name">KEY</address>
         </div>
       </footer>
     </div>
   </div>
-  <script>
-    const topBtn = document.querySelector('#top-btn');
-    const topContent = document.querySelector('#top');
-    const middleContent = document.querySelector('#middle');
-    const bottomContent = document.querySelector('#bottom');
-    function isMove (e) {
-      const offTop = e.getBoundingClientRect().top;
-      const saveName = e.getAttribute(href);
-      console.log(offTop, saveName);
-    }
-    console.log(isMove(topContent));
-    topBtn.addEventListener('click', function(){
-      window.scrollTo({top:0, left:0, behavior: 'smooth'});
-    })
-  </script>
 </body>
 </html>

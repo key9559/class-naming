@@ -65,13 +65,13 @@
 .l-flex-main {
   -ms-flex-preferred-size: 70%;
       flex-basis: 70%;
-  background: tomato;
+  background: lightblue;
 }
 
 .l-flex-side {
   -ms-flex-preferred-size: 29%;
       flex-basis: 29%;
-  background: beige;
+  background: pink;
 }
 
 /* header */

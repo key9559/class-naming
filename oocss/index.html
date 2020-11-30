@@ -25,15 +25,15 @@
 <body>
   <div id="app">
     <div class="wrap">
-      <header class="header">
-        <div class="fixed-wrap">
-          <div class="hd-content">
+      <header class="hd-wrapper">
+        <div class="content fixed-content">
+          <div class="con-center">
             <div class="flex-wrap">
               <h1 class="logo">
-                <span class="logo-default">LOGO</span>
-                <span class="logo-white">LOGO</span>
+                <span class="logo-img logo-img-default">LOGO</span>
+                <span class="logo-img logo-img-white">LOGO</span>
               </h1>
-              <nav class="main-nav">
+              <nav class="hd-nav">
                 <div class="flex-wrap">
                   <a href="#top" class="link active">top</a>
                   <a href="#middle" class="link">middle</a>
@@ -48,8 +48,8 @@
         </div>
       </header>
       <div class="main-content">
-        <div class="content-wrap">
-          <section id="top" class="top-content">
+        <div class="con-center">
+          <section id="top" class="content top-content">
             <h2>first content area</h2>
             <form method="get" id="search-form">
               <fieldset class="search-area">
@@ -57,24 +57,24 @@
                   검색
                 </legend>
                 <div class="input-box">
-                  <input type="text" class="search-text" />
-                  <button type="button" class="search-btn">검색</button>
+                  <input type="text" class="input search-txt input-underbar" />
+                  <button type="button" class="input-btn search-btn input-noneline">검색</button>
                 </div>
               </fieldset>
             </form>
           </section>
-          <section id="middle" class="middle-content">
+          <section id="middle" class="content middle-content">
             <h2>second content area</h2>
             <div class="flex-wrap">
-              <article class="flex-main">
+              <article class="md-content flex-main">
                 <h3>main content</h3>
               </article>
-              <aside class="flex-side">
+              <aside class="md-content flex-side">
                 <h3>side content</h3>
               </aside>
             </div>
           </section>
-          <section id="bottom" class="bottom-content">
+          <section id="bottom" class="content bottom-content">
             <h2>last content area</h2>
             <div class="flex-wrap">
               <div class="flex-content">content1</div>
@@ -85,28 +85,13 @@
           </section>
         </div>
       </div>
-      <footer class="footer">
-        <div class="content-wrap">
+      <footer class="ft-wrap">
+        <div class="con-center">
           <address class="tel">010-9559-8262</address>
           <address class="name">KEY</address>
         </div>
       </footer>
     </div>
   </div>
-  <script>
-    const topBtn = document.querySelector('#top-btn');
-    const topContent = document.querySelector('#top');
-    const middleContent = document.querySelector('#middle');
-    const bottomContent = document.querySelector('#bottom');
-    function isMove (e) {
-      const offTop = e.getBoundingClientRect().top;
-      const saveName = e.getAttribute(href);
-      console.log(offTop, saveName);
-    }
-    console.log(isMove(topContent));
-    topBtn.addEventListener('click', function(){
-      window.scrollTo({top:0, left:0, behavior: 'smooth'});
-    })
-  </script>
 </body>
 </html>
